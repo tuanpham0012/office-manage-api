@@ -2,10 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Reservation extends Model
+class Reservation extends BaseModel
 {
-    use HasFactory;
+    protected $table = 'reservations';
+    protected $fillable = [
+        'project_id',
+        'company_id',
+        'from_date',
+        'to_date',
+        'long_order',
+        'day_in_week',
+        'content',
+    ];
 }
