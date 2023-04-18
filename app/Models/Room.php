@@ -5,7 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class Room extends BaseModel
 {
-    use HasFactory;
+    protected $table = 'reservation_assets';
+    protected $fillable = [
+        'company_id',
+        'reservation_id',
+        'room_id',
+        'in_date',
+        'start_time',
+        'end_time',
+        'status',
+        'note',
+    ];
 }
